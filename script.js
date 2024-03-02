@@ -1,7 +1,6 @@
 const personagensNav = document.getElementById("personagens-nav");
 const episodiosNav = document.getElementById("episodios-nav");
-const localizacoesNav = document.getElementById("localizacoes-nav");
-const accordion = document.getElementsByClassName("accordion");
+const portifolioNav = document.getElementById("portifolio-nav");
 
 const routes = [
   {
@@ -13,8 +12,8 @@ const routes = [
     element: episodiosNav,
   },
   {
-    path: "localizacoes.html",
-    element: localizacoesNav,
+    path: "portifolio.html",
+    element: portifolioNav,
   },
 ];
 
@@ -23,16 +22,4 @@ window.addEventListener("load", () => {
     window.location.pathname.includes(route.path)
   );
   route.element.classList.add("nav-active");
-
-  for (let i = 0; i < accordion.length; i++) {
-    accordion[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
-    });
-  }
 });

@@ -18,59 +18,50 @@
           <a href="personagens.html">Personagens</a>
         </li>
         <li id="episodios-nav">
-          <a href="episodios.html">Episódios</a>
+          <a href="https://www.crunchyroll.com/pt-br/series/GYQ4MW246/naruto-shippuden">Episódios</a>
         </li>
-        <li id="localizacoes-nav">
-          <a href="localizacoes.html">Localizações</a>
+        <li id="portifolio-nav">
+          <a href="portifolio.html">Portifólio</a>
         </li>
       </ul>
     </header>
     <main>
       <article class="page-title">
         <h2 class="title-secondary">Personagens</h2>
-        <section class="search-section">
-          <input placeholder="Digite o nome do personagem..." />
+        <form method="post" id="personagem-search-form" class="search-section">
+          <input id="personagem-input" placeholder="Digite o nome do personagem..." />
           <button type="submit">Pesquisar</button>
-        </section>
+        </form>
       </article>
 
       <sectio class="personagens-container">
         <article>
           <section class="page-title">
             <h2>Filtros</h2>
-            <button>Limpar filtros</button>
+            <button id="limpa-filtros-btn" type="button">Limpar filtros</button>
           </section>
           <section class="filter-section">
             <button class="accordion">Status</button>
             <div class="panel">
-              <p>something</p>
+              <button data-type="status" class="badge">Vivo</button>
+              <button data-type="status" class="badge">Morto</button>
             </div>
-
-            <button class="accordion">Section 2</button>
+            
+            <button class="accordion">Rank</button>
             <div class="panel">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-
-            <button class="accordion">Section 3</button>
-            <div class="panel">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
+              <button data-type="rank" class="badge">Genin</button>
+              <button data-type="rank" class="badge">Chunnin</button>
+              <button data-type="rank" class="badge">Jounnin</button>
+              <button data-type="rank" class="badge">Hokage</button>
             </div>
           </section>
         </article>
 
-        <section>card</section>
+        <section class="card-section"></article>
+        </section>
       </section>
     </main>
+    <script async src="personagens.js"></script>
     <script async src="script.js"></script>
   </body>
 </html>
